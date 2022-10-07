@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "272683336931",
+    "project_id": "abbas-ada63",
+    "storage_bucket": "abbas-ada63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272683336931:android:67e696f372ec8f042071d6",
+        "android_client_info": {
+          "package_name": "com.projectrn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272683336931-kk0ligfdrbi6f23tujp8c08jq9c26of9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXhVbwGEZiyBSgdXRoC2A3xcMW7yr5eiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272683336931-kk0ligfdrbi6f23tujp8c08jq9c26of9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
