@@ -100,11 +100,11 @@ const About = ({ navigation }) => {
 
   }
 
-  const handlePushNotification =(item)=>{
+  const handlePushNotification = (item) => {
     PushNotification.localNotification({
-      channelId:'test-channel',
-      title:'you clicked on '+item.country,
-      message:item.city
+      channelId: 'test-channel',
+      title: 'you clicked on ' + item.country,
+      message: item.city
     })
 
   }
@@ -112,10 +112,20 @@ const About = ({ navigation }) => {
   return (
     <View style={styles.view}>
       <Text style={styles.txt}>{name}</Text>
+      <Pressable
+        onPress={()=>{
+          navigation.navigate('Camera');
+        }}
+        style={({ pressed }) => [
+          { backgroundColor: pressed ? 'yellow' : 'green' },
+          styles.pressable,
+        ]}>
+        <Text style={{ fontSize: 20,color:'white' }}>Take Picture</Text>
+      </Pressable>
       <FlatList style={{ backgroundColor: '#F2F2F2' }}
         data={cities}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={()=>{handlePushNotification(item)}} >
+          <TouchableOpacity onPress={() => { handlePushNotification(item) }} >
             <View style={{ backgroundColor: 'white', marginTop: 20, width: 300, alignItems: 'center', paddingBottom: 10, borderRadius: 10 }}>
               <Text style={{ fontSize: 30, color: 'black' }}>{item.country}</Text>
               <Text style={styles.txt}>{item.city}</Text>
@@ -176,7 +186,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   pressable: {
-    width: '25%',
+    width: '34%',
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',

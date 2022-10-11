@@ -138,6 +138,8 @@ android {
        javaMaxHeapSize "3g"
     }
     defaultConfig {
+        missingDimensionStrategy 'react-native-camera','general'
+        multiDexEnabled true
         applicationId "com.projectrn"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
