@@ -1,24 +1,37 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import Home from '../screens/Home';
-import Login from '../screens/Login';
-import About from '../screens/About';
+import { createStackNavigator } from '@react-navigation/stack';
+import Splash from '../screens/Splash';
+import BottomNavigation from './BottomNavigation';
+import Task from '../screens/Task';
 import Camera from '../screens/Camera';
 const Stack = createStackNavigator();
 
 const StackNavigation = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} options={{
-        header:()=>null
+    <Stack.Navigator
+      initialRouteName='Splash'
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#C4BFBB'
+        },
+        headerTitleAlign: 'center',
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontSize: 25,
+          fontWeight: 'bold'
+        },
+      }} >
+      <Stack.Screen name="Splash" component={Splash} options={{
+        headerShown: false
       }} />
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="About" component={About} options={{
-        header:()=>null
+      <Stack.Screen name="My Task" component={BottomNavigation} options={{
+        headerBackImage: () => null,
       }} />
+      <Stack.Screen name="Task" component={Task} />
       <Stack.Screen name="Camera" component={Camera} options={{
-        header:()=>null
+        header: () => null,
       }} />
+
     </Stack.Navigator>
   );
 };
